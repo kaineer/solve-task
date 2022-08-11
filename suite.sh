@@ -41,7 +41,7 @@ run_suite() {
 }
 ############ Add test runs here ############
 
-create_task() {
+create_test() {
   mkdir -p tests
   touch tests/input.$1.txt
   touch tests/expected.$1.txt
@@ -49,5 +49,5 @@ create_task() {
 
 case $1 in
   "") compile_task; run_suite ;;
-  "task") create_task $2 ;;
+  "test") create_test $2 ;;
 esac

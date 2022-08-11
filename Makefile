@@ -8,5 +8,5 @@ cpp:
 	./suite.sh
 
 test:
-	./suite.sh task ${TAG}
+	./suite.sh test ${TAG}
 .PHONY: test
