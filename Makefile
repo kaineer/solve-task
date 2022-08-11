@@ -1,16 +1,18 @@
 all:
-	./suite.sh
+	./scripts/suite.sh
 python:
 	echo "RUNNER=python" > .suite
-	./suite.sh
+	./scripts/suite.sh
 cpp:
 	echo "RUNNER=cpp" >.suite
-	./suite.sh
+	./scripts/suite.sh
 
 test:
-	./suite.sh test ${TAG}
+	./scripts/suite.sh test ${TAG}
+
 help:
-	./suite.sh help
+	./scripts/suite.sh help
+
 h: help
 
 .PHONY: test help h
