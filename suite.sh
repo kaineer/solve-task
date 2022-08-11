@@ -45,6 +45,9 @@ create_test() {
   mkdir -p tests
   touch tests/input.$1.txt
   touch tests/expected.$1.txt
+  if [[ "$EDITOR" != "" ]]; then
+    $EDITOR tests/input.$1.txt tests/expected.$1.txt
+  fi
 }
 
 case $1 in
