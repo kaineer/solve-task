@@ -50,7 +50,15 @@ create_test() {
   fi
 }
 
+usage() {
+  echo " $ make             # run tests"
+  echo " $ make python      # switch to python and run tests"
+  echo " $ make cpp         # switch to cpp and run tests"
+  echo " $ TAG=N make test  # create files for test N"
+}
+
 case $1 in
   "") compile_task; run_suite ;;
+  "help") usage ;;
   "test") create_test $2 ;;
 esac

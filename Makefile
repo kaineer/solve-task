@@ -9,4 +9,8 @@ cpp:
 
 test:
 	./suite.sh test ${TAG}
-.PHONY: test
+help:
+	./suite.sh help
+h: help
+
+.PHONY: test help h
